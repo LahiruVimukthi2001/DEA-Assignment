@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>New Ticket Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="myjs.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="mycss.css">
+</head>
+<style type="text/css">
+    .affix{top:5rem;}		
+    body{position: relative; background-image:url(picture16.jpg);};
+</style>
+
+<body data-spy="scroll" data-target="#myscroll">
+
+<div id="#myscroll" class="container" style="margin-left: 300px;margin-top: 5rem;  width:60%; padding: 0 5rem 0 5rem">
+
+    <center><h2><b>Add New Ticket Details</b></h2></center>
+<hr>
+    <div  style="width: 100%">
+     <div class="panel-group">
+      <div class="panel panel-default">
+       <div class="panel-heading">
+        <legend style="text-align: center;">New Ticket Information</legend>
+       </div>
+       <div class="panel-body">
+       <div class="input-group">								
+       </div>
+       <br>
+
+    <form class="form-inline" action="TicketDetails.jsp" method="post" >
+    <center>
+
+    <div class="input-group">                                                                       
+    <label for="">Ticket ID</label>
+    <input type="text" class="form-control" placeholder="Ticket ID" name="ticketid" required>
+    </div>       
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp								
+    <div class="input-group">
+      <label for="">Flight ID</label>
+      <input type="text" class="form-control" placeholder="Flight ID" name="flightid" required>
+    </div>
+    <br><br>
+    <div>          
+          
+    <div class="input-group">
+    <label for="from">Flight Name</label>
+    <input type="text" class="form-control" placeholder="Flight Name" name="flname"  id="flightname" required>
+    </div>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    
+    <div class="input-group">
+    <label for="Capacity">Class</label>
+    <input type="text" class="form-control" placeholder="Class" name="fclass" id="class" required>
+    </div>
+    <br><br><div>
+    
+
+    <div class="input-group">
+    <label for="from">From</label>
+    <input type="text" class="form-control" placeholder="Start" name="from"  id="from" required>
+    </div>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <div class="input-group">
+    <label for="to">To</label>
+    <input type="text" class="form-control" placeholder="Destination" name="to" id="to" required>
+    </div>
+    </div>
+    <br>
+    <div>
+    
+    <div class="input-group">
+    <label for="Departure">Departure Date</label>
+    <input type="text" class="form-control" name="ddate" min="" id="Departure" required>
+    </div>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <div class="input-group">
+    <label>Departure Time</label>
+    <input type="text" class="form-control" name="dtime" id="" >
+    </div>
+    </div>
+    <br><br>
+								
+    <br>
+    <div style="text-align: center;">
+       <input type="submit" class="btn btn-primary" value="submit">
+    </div>
+</div>
+</center>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+   <title>contact Details</title>   
+<style>
+    /* UTILITIES */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ font-family: cursive;background-color:;background-image:url(picture16.jpg);
+}
+a {
+ text-decoration: none;
+}
+li {
+ list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px;
+ background-color:#0000FF;
+ color: #fff;
+}
+.nav-links a {
+ color: #fff;
+}
+/* LOGO */
+.logo {
+ font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+}
+.menu li:hover {
+ background-color: #4c9e9e;
+ border-radius: 5px;
+ transition: 0.3s ease;
+}
+.menu li {
+ padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.services {
+ position: relative; 
+}
+.dropdown {
+ background-color: #0000FF;
+ padding: 1em 0;
+ position: absolute; /*WITH RESPECT TO PARENT*/
+ display: none;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #0000FF;
+}
+.services:hover .dropdown {
+ display: block;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color:#0000FF;
+ right: 0;
+ left: 0;
+ text-align: center;
+ padding: 16px 0;
+}
+.menu li:hover {
+ display: inline-block;
+ background-color:#4c9e9e;
+ transition: 0.3s ease;
+}
+.menu li + li {
+ margin-top: 12px;
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+}
+.dropdown {
+ left: 50%;
+ top: 30px;
+ transform: translateX(35%);
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+}
+
+.Footer {
+  margin-top:20px;
+  height: 50px;
+  width: 100%;
+  background-color: #0000FF;
+  position: relative;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color:#60A3D9;
+  margin-left: 370px;
+  padding: 20px; width: 50%;
+}
+
+</style>
+</head>
+<body>
+  <nav class="navbar">   
+    <div class="logo">&nbsp&nbsp&nbsp Phoenix Airline PVT </div> 
+    <ul class="nav-links"> 
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+      <div class="menu">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Login.html">Sign in</a></li>
+        <li class="services">
+          <a href="">Create Account</a>
+              <ul class="dropdown">
+                <li><a href="UserAccount.html">User</a></li>
+                <li><a href="StaffAccount.html">Staff</a></li>
+              </ul>
+        </li>
+        <li class="services">
+         <a href="">Dasboard</a>
+         <ul class="dropdown">
+           <li><a href="Dashboard.html">Admin</a></li>
+           <li><a href="Dashboard.html">User</a></li>
+           <li><a href="Dashboard.html">Staff</a></li>
+        </ul>
+        </li>
+        <li><a href="ManageTicket1.html">Ticket Details</a></li>
+        <li><a href="ManageFlight1.html">Flight Details</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="FeedBack.html">Feedback</a></li>
+      </div>
+    </ul>
+  </nav>
+<br>
+  
+<center><h1 style="color:white">Contact Form</h1></center><br>
+
+<div class="container">
+<form action="ContactDetails.jsp" method="post">
+      
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="FirstName" placeholder="Your first name">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="LastName" placeholder="Your last name">
+
+    <label for="country">Country</label>
+    <select id="country" name="Country">
+      <option value="SriLanka">SriLanka</option>
+      <option value="India">India</option>
+      <option value="canada">Australia</option>
+      <option value="usa">England</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="Subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <center><input type="submit" value="Submit"></center>
+  </form>
+</div>
+
+<div class="Footer"></div>
+
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+$("#m1").click({param1:"#sub1",param2:"#sub2",param3:"#sub3",param4:"#sub4"},navbar_movment);
+$("#m2").click({param1:"#sub2",param2:"#sub1",param3:"#sub3",param4:"#sub4"},navbar_movment);
+$("#m3").click({param1:"#sub3",param2:"#sub1",param3:"#sub2",param4:"#sub4"},navbar_movment);
+$("#m4").click({param1:"#sub4",param2:"#sub1",param3:"#sub2",param4:"#sub3"},navbar_movment);
+</script>

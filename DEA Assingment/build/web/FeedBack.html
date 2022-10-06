@@ -1,0 +1,285 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>Feedback Details</title>
+<style>    
+* {    
+  box-sizing: border-box;    
+}       
+input[type=text], select, textarea {    
+  width: 100%;    
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;    
+}    
+input[type=email], select, textarea {    
+  width: 100%;    
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;    
+}        
+label {    
+  padding: 12px 12px 12px 0;    
+  display: inline-block;    
+}    
+    
+input[type=submit] {    
+  background-color: rgb(37, 116, 161);    
+  color: white;    
+  padding: 12px 20px;    
+  border: none;    
+  border-radius: 4px;    
+  cursor: pointer;    
+  float: right;    
+}        
+input[type=submit]:hover {    
+  background-color: #45a049;    
+}    
+    
+.container {    
+  border-radius: 5px;    
+  background-color: #f2f2f2;    
+  padding: 20px;    
+}    
+    
+.col-25 {
+  float: left;    
+  width: 25%;    
+  margin-top: 6px;    
+}    
+    
+.col-75 {    
+  float: left;    
+  width: 75%;    
+  margin-top: 6px;    
+}    
+    
+.row:after {    
+  content: "";    
+  display: table;    
+  clear: both;    
+}    
+
+  * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ font-family: Arial, Helvetica, sans-serif; background-color:#87CEFA;
+}
+a {
+ text-decoration: none;
+}
+li {
+ list-style: none;
+}
+
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px;
+ background-color:#0000FF;
+ color: #fff;
+}
+.nav-links a {
+ color: #fff;
+}
+/* LOGO */
+.logo {
+ font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+}
+.menu li:hover {
+ background-color: #4c9e9e;
+ border-radius: 5px;
+ transition: 0.3s ease;
+}
+.menu li {
+ padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.services {
+ position: relative; 
+}
+.dropdown {
+ background-color: #0000FF;
+ padding: 1em 0;
+ position: absolute;
+ display: none;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #0000FF;
+}
+.services:hover .dropdown {
+ display: block;
+}
+
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color:#0000FF;
+ right: 0;
+ left: 0;
+ text-align: center;
+ padding: 16px 0;
+}
+.menu li:hover {
+ display: inline-block;
+ background-color:#4c9e9e;
+ transition: 0.3s ease;
+}
+.menu li + li {
+ margin-top: 12px;
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+}
+.dropdown {
+ left: 50%;
+ top: 30px;
+ transform: translateX(35%);
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+}
+
+.Footer {
+  margin-top:20px;
+  height: 50px;
+  width: 100%;
+  background-color: #0000FF;
+  position: relative;
+}
+
+</style>    
+</head>    
+<body>  
+  <nav class="navbar">   
+    <div class="logo">&nbsp&nbsp&nbsp Phoenix Airline PVT </div>
+    <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <div class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Sign in</a></li>
+        <li class="services">
+          <a href="/">Create Account</a>
+          <ul class="dropdown">
+             <li><a href="/">User</a></li>
+             <li><a href="/">Staff</a></li>
+          </ul>
+        </li>
+        <li class="services">
+          <a href="/">Dasboard</a>
+            <ul class="dropdown">
+            <li><a href="/">Admin</a></li>
+            <li><a href="/">User</a></li>
+            <li><a href="/">Staff</a></li>
+            </ul>
+            </li>
+            <li><a href="/">Ticket Details</a></li>
+            <li><a href="/">Flight Details</a></li>
+            <li><a href="/">Contact</a></li>
+            <li><a href="/">Feedback</a></li>
+    </div>
+    </ul>
+ </nav>
+ <br><br>
+    
+    <center><h2>FEED BACK FORM</h2></center>    <br>
+    <div class="container">    
+    <form action="Feedback.jsp" method="post">    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="fname">First Name</label>    
+      </div>    
+      <div class="col-75">    
+        <input type="text" id="fname" name="fname" placeholder="Enter your first name..">    
+      </div>    
+    </div>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="lname">Last Name</label>    
+      </div>    
+      <div class="col-75">    
+        <input type="text" id="lname" name="lname" placeholder="Enter your last name..">    
+      </div>    
+    </div>    
+    <div class="row">    
+        <div class="col-25">    
+          <label for="email">Email</label>    
+        </div>    
+        <div class="col-75">    
+          <input type="text" id="email" name="mail" placeholder="Enter your Email..">    
+        </div>    
+    </div>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="country">Country</label>    
+      </div>    
+      <div class="col-75">    
+        <select id="country" name="country">    
+          <option value="none">Select Country</option>
+          <option value="Sri lanka">Sri Lanka</option> 
+          <option value="india">India</option> 
+          <option value="australia">Australia</option>    
+          <option value="canada">Canada</option>    
+          <option value="usa">USA</option>    
+          <option value="russia">Russia</option>    
+          <option value="japan">Japan</option>    
+          <option value="china">China</option>    
+        </select>    
+      </div>    
+    </div>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="feed_back">Feed Back</label>    
+      </div>    
+      <div class="col-75">    
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>    
+      </div>    
+    </div>    
+    <div class="row">    
+      <input type="submit" value="Submit">    
+    </div>    
+  </form>    
+</div>   
+<div class="Footer"></div>   
+ 
+</body>    
+</html>    
