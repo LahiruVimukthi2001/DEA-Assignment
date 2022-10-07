@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+   <title>Home Page</title>
+<style>
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ font-family: Arial, Helvetica;
+}
+a {
+ text-decoration: none;
+}
+li {
+ list-style: none;
+}
+
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px;
+ background-color:#0000FF;
+ color: #fff;
+}
+.nav-links a {
+ color: #fff;
+}
+/* LOGO */
+.logo {
+ font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+}
+.menu li:hover {
+ background-color: #4c9e9e;
+ border-radius: 5px;
+ transition: 0.3s ease;
+}
+.menu li {
+ padding: 5px 14px;
+}
+
+.services {
+ position: relative; 
+}
+.dropdown {
+ background-color: #0000FF;
+ padding: 1em 0;
+ position: absolute; 
+ display: none;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #0000FF;
+}
+.services:hover .dropdown {
+ display: block;
+}
+
+input[type=checkbox]{
+ display: none;
+} 
+
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color:#0000FF;
+ right: 0;
+ left: 0;
+ text-align: center;
+ padding: 16px 0;
+}
+.menu li:hover {
+ display: inline-block;
+ background-color:#4c9e9e;
+ transition: 0.3s ease;
+}
+.menu li + li {
+ margin-top: 12px;
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+}
+.dropdown {
+ left: 50%;
+ top: 30px;
+ transform: translateX(35%);
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+}
+.Footer {
+  margin-top:20px;
+  height: 50px;
+  width: 100%;
+  background-color: #0000FF;
+  position: relative;
+}
+/*image edit*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+}
+.column {
+  flex: 33.33%;
+  padding: 5px; 
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*button edit..*/
+.button{ background-color:blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.first{color:white;}
+
+</style>
+</head>
+<body>
+  <nav class="navbar">       
+     <div class="logo">&nbsp&nbsp&nbsp Phoenix Airline PVT </div>   
+     <ul class="nav-links">
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+      <div class="menu">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Login.html">Sign in</a></li>
+        <li class="services">
+          <a href="">Create Account</a>
+          <ul class="dropdown">
+            <li><a href="UserAccount.html">User</a></li>
+            <li><a href="StaffAccount.html">Staff</a></li>
+          </ul>
+        </li>
+        <li class="services">
+         <a href="">Dasboard</a>
+         <ul class="dropdown">
+           <li><a href="Dashboard.html">Admin</a></li>
+           <li><a href="Dashboard.html">User</a></li>
+           <li><a href="Dashboard.html">Staff</a></li>
+         </ul>
+        </li>
+        <li><a href="ManageTicket1.html">Ticket Details</a></li>
+        <li><a href="ManageFlight1.html">Flight Details</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="FeedBack.html">Feedback</a></li>
+      </div>
+    </ul>
+    </nav>
+    <br>
+            
+   <div class="container">
+    <img src="picture2.jpg" alt="Snow" style="width:100%;"><br>  
+    <div class="centered">
+    <div class="first">
+    <h1>Air Ticket Booking Management System</h1>
+    <h2>For tour operators, travel agencies, and staff, Phoenix Airline is a web-based air ticket booking management system .</h2><br><br>  
+    </div>  
+    </div>
+   </div>
+   
+   <center>
+   <br>
+     <h2><b>&nbsp&nbsp Flight Reservation System is required to manage flights ticket bookings, schedule flights, and deliver the required information to &nbsp&nbsp the enduser.</b></h2>  
+     <br><p><h2>Find the most affordable flight options.</h2><br>
+    <h3>
+        Let us assist you in beginning your search for affordable flights and travel offers. We have you covered whether you're planning a fun-filled business trip or a romantic weekend break with your significant other or family. We specialize in locating affordable plane tickets for both domestic and international travel.<br>
+    </h3>
+    <br><h2>What distinguishes Phoenix Airline</h2><br>
+    <h3>
+        You may see the world and make the most of your travels with the assistance of our team of knowledgeable travelers and enthusiastic explorers. We have the insider knowledge, inspiration for travel, and trip-planning advice that you won't find anyplace else. We'll even send you our exclusive offers directly to your mailbox.<br></p>
+    </h3>
+   </center>
+   <br><br>
+
+   <div class="row">
+    <div class="column">
+     <img src="picture6.jpg" alt="Snow" style="width:100%" >
+    </div>
+    <div class="column">
+     <img src="picture5.jpg" alt="Forest" style="width:100%">
+    </div>
+    <div class="column">
+     <img src="picture7.jpg" alt="Mountains" style="width:100%">
+    </div>
+   </div>
+   <br><br>
+
+   <center>
+     <h1>Advantages of Our Flight Reservation System</h1><br>
+     <h2>
+       increase Profitability<br>
+       Airline inventory Management<br>
+       Intuitive Flight Reservation and Management<br>
+       Provides fast and error free online reservation facility<br>
+       Search,Book,Confirm through single booking platform
+     </h2>
+   </center>
+   <br>
+   
+   <div class="row">
+    <div class="column">
+      <img src="picture8.jpg" alt="Snow" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="picture9.jpg" alt="Forest" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="picture10.jpg" alt="Mountains" style="width:100%">
+    </div>
+   </div>
+  
+   <div class="Footer"></div>
+
+</div>
+</body>
+</html>
